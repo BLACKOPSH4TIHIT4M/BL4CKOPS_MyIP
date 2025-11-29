@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div id="copyleft">
-      <p class="text-center"><span>Created by Jason Ng with love</span> <a :href="t('page.footerLink')"
+      <p class="text-center"><span>🇮🇩 BL4CKOPS IP Reconnaissance</span> <a :href="t('page.footerLink')"
           class="link-dark" target="_blank" @click="trackEvent('Footer', 'FooterClick', 'Github');"
           aria-label="Github"><i class="bi bi-github" :class="{ 'dark-mode': isDarkMode }"
             v-tooltip="{ title: t('Tooltips.GithubLink'), placement: 'top' }"></i></a>
@@ -10,8 +10,8 @@
 
     <div id="about" class="text-center mb-2">
       <a class="link link-underline-offset link-underline-opacity-0 jn-heart-color" role="button"
-        aria-controls="Sponsor" href="https://github.com/sponsors/jason5ng32" target="_blank">
-        {{ t('about.Sponsor') }} 💖
+        aria-controls="Sponsor" href="https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP" target="_blank">
+        GitHub Repository 💻
       </a>&nbsp;&nbsp;
       <a class="link link-underline-offset link-underline-opacity-0" :class="[isDarkMode ? 'link-light' : 'link-dark']"
         role="button" aria-controls="About" @click.prevent="openAbout">
