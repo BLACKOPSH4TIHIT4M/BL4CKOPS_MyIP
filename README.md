@@ -1,8 +1,12 @@
-# 🧰 MyIP - A Better IP Toolbox
+# 🇮🇩 BL4CKOPS IP Reconnaissance Tool
+
+> **Advanced IP Intelligence Platform with Network Diagnostics & Security Testing**
 
 <div align="center">
 
 ![IPCheck.ing Banner](https://raw.githubusercontent.com/jason5ng32/MyIP/main/public/github/gh_banner.png)
+
+> 🔗 **[📐 Design & Documentation](https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool)** | **[🎨 UI/UX Design](https://www.orchids.app/projects/4febf5ec-0b97-4938-8745-ddc60da62855)** | **[📚 Documentation Hub](./DOCUMENTATION_HUB.md)**
 
 <a href="https://trendshift.io/repositories/5332" target="_blank"><img src="https://trendshift.io/api/badge/repositories/5332" alt="jason5ng32%2FMyIP | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
@@ -30,11 +34,21 @@ Feel free to bookmark the demo or deploy your own.
 
 ## 📖 Documentation
 
-- **[USER_GUIDE.md](USER_GUIDE.md)** - What this tool collects, why, and transparency about data usage
+### 🚀 Getting Started
 - **[QUICK_START.md](QUICK_START.md)** - Quick setup guide for all platforms
 - **[DEPLOYMENT.md](DEPLOYMENT.md)** - Comprehensive deployment instructions
+
+### 📐 Design & Architecture
+- **[DOCUMENTATION_HUB.md](DOCUMENTATION_HUB.md)** - Central documentation hub
+- **[Design Repository](https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool)** - Architecture, API docs, system design
+- **[UI/UX Design](https://www.orchids.app/projects/4febf5ec-0b97-4938-8745-ddc60da62855)** - Figma mockups & design system
+
+### 📚 Reference
+- **[USER_GUIDE.md](USER_GUIDE.md)** - What this tool collects, why, and transparency about data usage
 - **[HOW_IT_WORKS.md](HOW_IT_WORKS.md)** - Technical architecture and LAN access setup
 - **[ADMIN_DASHBOARD.md](ADMIN_DASHBOARD.md)** - Admin panel features and monitoring
+- **[ADMIN_SETUP.md](ADMIN_SETUP.md)** - Admin authentication setup
+- **[SECURITY_IMPLEMENTATION.md](SECURITY_IMPLEMENTATION.md)** - Security features and implementation
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines
 - **[SECURITY.md](SECURITY.md)** - Security practices and vulnerability disclosure
 
