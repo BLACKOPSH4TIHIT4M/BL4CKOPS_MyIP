@@ -10,8 +10,6 @@ import { analytics } from './utils/use-analytics';
 import { Tooltip } from 'bootstrap';
 import { detectOS } from './utils/system-detect';
 import './design-system.css'
-import './style/bl4ckops-theme.css'
-import './style/globals.css'
 import './style/style.css'
 
 const app = createApp(App);
