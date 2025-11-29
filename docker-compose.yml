@@ -1,11 +1,53 @@
 # docker-compose up -d
-version: '3'
+# Multi-service deployment: Backend API + Frontend (Next.js Orchid Skin)
+version: '3.8'
+
 services:
-    myip:
-        container_name: myip
-        image: BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP:latest # my-app: x.x.x
-        stdin_open: true # docker run -i 交互模式
-        tty: true        # docker run -t 终端模式
-        restart: always # 重启策略 / on-failure:5 重启次数5次 / always 一直重启 / unless-stopped 除非停止 / no 从不重启
-        ports:
-            - "18966:18966"
+  # Backend API (Node.js/Express)
+  backend:
+    container_name: bl4ckops-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP:latest
+    stdin_open: true
+    tty: true
+    restart: always
+    ports:
+      - "11966:11966"
+    environment:
+      - BACKEND_PORT=11966
+      - NODE_ENV=production
+      - ALLOWED_DOMAINS=localhost,127.0.0.1,bl4ckops-myip2
+    volumes:
+      - ./api:/app/api
+      - ./common:/app/common
+      - ./logs:/app/logs
+    networks:
+      - bl4ckops-network
+
+  # Frontend (Next.js Orchid Skin)
+  frontend:
+    container_name: bl4ckops-frontend
+    build:
+      context: ./bl4ckops-myip2
+      dockerfile: Dockerfile
+    image: BLACKOPSH4TIHIT4M/bl4ckops-myip2:latest
+    restart: always
+    ports:
+      - "18969:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:11966
+      - NEXT_PUBLIC_DEPLOYMENT_ENV=docker
+      - NODE_ENV=production
+    depends_on:
+      - backend
+    networks:
+      - bl4ckops-network
+
+networks:
+  bl4ckops-network:
+    driver: bridge
+
+volumes:
+  bl4ckops-logs:
