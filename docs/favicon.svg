@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes pulse {{ 0%, 100% {{ opacity: 0.6; }} 50% {{ opacity: 1; }} }}
+      .pulse {{ animation: pulse 2s ease-in-out infinite; }}
+    </style>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="128" height="128" fill="#050515"/>
+  
+  <!-- Matrix characters -->
+  <text x="20" y="30" font-family="Courier New" font-size="10" fill="#00ffc8" class="pulse">01</text>
+  <text x="70" y="50" font-family="Courier New" font-size="10" fill="#00ffc8" class="pulse">10</text>
+  <text x="40" y="80" font-family="Courier New" font-size="10" fill="#00ffc8" class="pulse">11</text>
+  
+  <!-- Center icon -->
+  <circle cx="64" cy="64" r="30" fill="none" stroke="#00ffff" stroke-width="2" filter="url(#glow)" class="pulse"/>
+  <text x="64" y="72" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00ffcc" text-anchor="middle">B</text>
+</svg>
