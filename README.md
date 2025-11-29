@@ -40,7 +40,10 @@ Feel free to bookmark the demo or deploy your own.
 
 ### 📐 Design & Architecture
 - **[DOCUMENTATION_HUB.md](DOCUMENTATION_HUB.md)** - Central documentation hub
-- **[Design Repository](https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool)** - Architecture, API docs, system design
+- **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System architecture, security model, diagrams
+- **[docs/DESIGN.md](docs/DESIGN.md)** - Features, security implementation, development patterns
+- **[docs/API.md](docs/API.md)** - Complete API reference with examples
+- **[Design Repository (Separate)](https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool)** - Full design project
 - **[UI/UX Design](https://www.orchids.app/projects/4febf5ec-0b97-4938-8745-ddc60da62855)** - Figma mockups & design system
 
 ### 📚 Reference
