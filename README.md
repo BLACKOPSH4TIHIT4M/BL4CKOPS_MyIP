@@ -111,6 +111,12 @@ npm start
 
 The program will run on port 18966.
 
+### Production Build
+
+```bash
+npm run build:obfuscate
+```
+
 ### Using Docker
 
 Click the 'Deploy to Docker' button at the top to complete the deployment. Or, use the following shell:
