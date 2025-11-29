@@ -9,16 +9,18 @@
             <p>{{ t('advancedtools.Note') }}</p>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-12 mb-4" v-for="(card, index) in cards.filter(card => card.enabled)"
-                :key="index">
+                <div class="col-lg-3 col-md-6 col-12 mb-4" v-for="(card, index) in cards"
+                    :key="index">
                 <div class="jn-adv-card card jn-card" :class="{ 'dark-mode dark-mode-border': isDarkMode }">
-                    <div class="card-body" @click.prevent="navigateAndToggleOffcanvas(card.path)" role="button">
+                        <div class="card-body" @click.prevent="card.enabled && navigateAndToggleOffcanvas(card.path)" role="button"
+                            :class="{ 'disabled-card': !card.enabled }">
                         <h3 :class="[isMobile ? 'mobile-h3' : 'fs-4']" class="jn-adv-title">
                             <i class="bi bi-arrow-up-right-circle"></i> {{ t(card.titleKey) }}
                         </h3>
                         <p class="opacity-75">{{ t(card.noteKey) }}</p>
                         <span :class="[isDarkMode ? 'jn-icon-dark' : 'jn-icon']">{{ card.icon }}</span>
                     </div>
+                    <div v-if="!card.enabled" class="jn-disabled-label">Disabled by server</div>
                 </div>
             </div>
         </div>
@@ -77,6 +79,8 @@ const cards = reactive([
     { path: '/macchecker', icon: '🗄️', titleKey: 'macchecker.Title', noteKey: 'advancedtools.MacChecker', enabled: true },
     { path: '/browserinfo', icon: '🖥️', titleKey: 'browserinfo.Title', noteKey: 'advancedtools.BrowserInfo', enabled: true },
     { path: '/securitychecklist', icon: '📋', titleKey: 'securitychecklist.Title', noteKey: 'advancedtools.SecurityChecklist', enabled: true },
+    { path: '/traceroute', icon: '🛰️', titleKey: 'traceroute.Title', noteKey: 'advancedtools.TracerouteNote', enabled: true },
+    { path: '/connectioninfo', icon: '📡', titleKey: 'connectioninfo.Title', noteKey: 'advancedtools.ConnectionInfoNote', enabled: true },
     { path: '/invisibilitytest', icon: '🫣', titleKey: 'invisibilitytest.Title', noteKey: 'advancedtools.InvisibilityTest', enabled: false }
 ]);
 
@@ -120,6 +124,15 @@ onMounted(() => {
     setTimeout(() => {
         if (configs.value.originalSite) {
             cards.find(x => x.path === '/invisibilitytest').enabled = true;
+        }
+        // Toggle feature availability from backend configs
+        if (configs.value && typeof configs.value.traceroute !== 'undefined') {
+            const c = cards.find(x => x.path === '/traceroute');
+            if (c) c.enabled = !!configs.value.traceroute;
+        }
+        if (configs.value && typeof configs.value.connInfo !== 'undefined') {
+            const c = cards.find(x => x.path === '/connectioninfo');
+            if (c) c.enabled = !!configs.value.connInfo;
         }
     }, 1500);
 });
@@ -191,6 +204,17 @@ defineExpose({
 .jn-adv-card:hover .jn-icon {
     transform: translateY(-10pt) scale(1.8);
     text-shadow: 0 0 10pt #00000060;
+}
+
+.disabled-card {
+    pointer-events: none;
+    opacity: 0.55;
+}
+.jn-disabled-label {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    color: #b0b0b0;
+    text-align: center;
 }
 
 .jn-adv-title {

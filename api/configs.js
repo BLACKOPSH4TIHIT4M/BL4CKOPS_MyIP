@@ -9,7 +9,7 @@ export default (req, res) => {
 
     // 限制只能从指定域名访问
     const referer = req.headers.referer;
-    if (!refererCheck(referer)) {
+    if (!refererCheck(referer, req.headers['x-forwarded-host'] || req.headers.host)) {
         return res.status(403).json({ error: referer ? 'Access denied' : 'What are you doing?' });
     }
 
@@ -25,6 +25,8 @@ export default (req, res) => {
         originalSite,
         cloudFlare: process.env.CLOUDFLARE_API,
         ipapiis: process.env.IPAPIIS_API_KEY,
+        traceroute: (process.env.TRACEROUTE_ENABLED || 'false').toLowerCase() === 'true',
+        connInfo: (process.env.CONN_INFO_ENABLED || 'false').toLowerCase() === 'true',
     };
     let result = {};
     for (const key in envConfigs) {

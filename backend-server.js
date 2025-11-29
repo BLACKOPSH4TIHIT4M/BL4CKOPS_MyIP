@@ -5,6 +5,7 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { slowDown } from 'express-slow-down'
 import rateLimit from 'express-rate-limit';
+import { adminAuthMiddleware } from './common/admin-auth.js';
 
 // Backend APIs
 import mapHandler from './api/google-map.js';
@@ -22,12 +23,26 @@ import dnsResolver from './api/dns-resolver.js';
 import getWhois from './api/get-whois.js';
 import invisibilitytestHandler from './api/invisibility-test.js';
 import macChecker from './api/mac-checker.js';
+import tracerouteHandler from './api/traceroute.js';
+import accessInfoHandler from './api/access-info.js';
+import connInfoHandler from './api/conn-info.js';
+// Admin
+import adminLoginHandler from './api/admin-login.js';
 // User
 import validateConfigs from './api/configs.js';
 import getUserinfo from './api/get-user-info.js';
 import updateUserAchievement from './api/update-user-achievement.js';
 
-dotenv.config();
+// Suppress potential dotenv startup tips so the console isn't noisy for users
+{
+    const _consoleLog = console.log;
+    try {
+        console.log = () => {};
+        dotenv.config({ debug: false });
+    } finally {
+        console.log = _consoleLog;
+    }
+}
 
 const app = express();
 const backEndPort = parseInt(process.env.BACKEND_PORT || 11966, 10);
@@ -133,6 +148,19 @@ if (speedLimitSet !== 0) {
 
 app.use(express.json());
 
+// Route-specific rate limiters
+const tracerouteLimiter = rateLimit({ windowMs: 60 * 1000, max: 3, message: 'Too Many Traceroute Requests' });
+const connInfoLimiter = rateLimit({ windowMs: 60 * 1000, max: 6, message: 'Too Many Conn Info Requests' });
+
+// ===== ADMIN ENDPOINTS (Protected by Token Auth) =====
+// Login endpoint - POST dengan password
+app.post('/api/admin/login', express.json(), adminLoginHandler);
+
+// Admin status check - memerlukan token
+app.get('/api/admin/status', adminAuthMiddleware, (req, res) => {
+  res.json({ status: 'authenticated', role: 'admin', message: 'Admin access granted' });
+});
+
 // APIs
 app.get('/api/map', mapHandler);
 app.get('/api/ipinfo', ipinfoHandler);
@@ -149,6 +177,9 @@ app.get('/api/macchecker', macChecker);
 app.get('/api/maxmind', maxmindHandler);
 app.get('/api/getuserinfo', getUserinfo);
 app.put('/api/updateuserachievement', updateUserAchievement);
+app.get('/api/traceroute', adminAuthMiddleware, tracerouteLimiter, tracerouteHandler);
+app.get('/api/access-info', accessInfoHandler);
+app.get('/api/conn-info', adminAuthMiddleware, connInfoLimiter, connInfoHandler);
 
 // 使用查询参数处理所有配置请求
 app.get('/api/configs', validateConfigs);

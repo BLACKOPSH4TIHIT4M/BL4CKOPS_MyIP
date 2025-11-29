@@ -12,6 +12,7 @@
       <WebRTC ref="webRTCRef" />
       <DNSLeaks ref="dnsLeaksRef" />
       <SpeedTest ref="speedTestRef" />
+      <AccessInfo />
       <AdvancedTools ref="advancedToolsRef" />
     </div>
   </div>
@@ -35,6 +36,7 @@ import WebRTC from './components/WebRtcTest.vue';
 import DNSLeaks from './components/DnsLeaksTest.vue';
 import SpeedTest from './components/SpeedTest.vue';
 import AdvancedTools from './components/Advanced.vue';
+import AccessInfo from './components/AccessInfo.vue';
 import Additional from './components/Additional.vue';
 import Footer from './components/Footer.vue';
 import User from './components/User.vue';

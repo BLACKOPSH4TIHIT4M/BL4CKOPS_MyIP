@@ -4,7 +4,8 @@ export default async (req, res) => {
 
     // 限制只能从指定域名访问
     const referer = req.headers.referer;
-    if (!refererCheck(referer)) {
+    const hostHeader = req.headers['x-forwarded-host'] || req.headers.host;
+    if (!refererCheck(referer, hostHeader)) {
         return res.status(403).json({ error: referer ? 'Access denied' : 'What are you doing?' });
     }
 

@@ -28,6 +28,16 @@ Feel free to bookmark the demo or deploy your own.
 
 </div>
 
+## 📖 Documentation
+
+- **[USER_GUIDE.md](USER_GUIDE.md)** - What this tool collects, why, and transparency about data usage
+- **[QUICK_START.md](QUICK_START.md)** - Quick setup guide for all platforms
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Comprehensive deployment instructions
+- **[HOW_IT_WORKS.md](HOW_IT_WORKS.md)** - Technical architecture and LAN access setup
+- **[ADMIN_DASHBOARD.md](ADMIN_DASHBOARD.md)** - Admin panel features and monitoring
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines
+- **[SECURITY.md](SECURITY.md)** - Security practices and vulnerability disclosure
+
 ## 👀 Main Features
 
 * 🛜 **View Your IPs**: Detects and displays your local IPs, sourcing from multiple IPv4 and IPv6 providers.
