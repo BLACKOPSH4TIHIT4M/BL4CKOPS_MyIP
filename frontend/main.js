@@ -9,6 +9,7 @@ import { analytics } from './utils/use-analytics';
 
 import { Tooltip } from 'bootstrap';
 import { detectOS } from './utils/system-detect';
+import './design-system.css'
 import './style/design-system.css'
 import './style/style-complete.css'
 import './style/style.css'
