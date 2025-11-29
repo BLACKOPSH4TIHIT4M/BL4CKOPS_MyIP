@@ -1,10 +1,10 @@
-![BL4CKOPS Banner](docs/public/bl4ckops-banner.png)
+<div align="center">
+
+![BL4CKOPS Banner](public/bl4ckops-banner.png)
 
 # BL4CKOPS IP Reconnaissance Tool
 
 > **Advanced IP Intelligence Platform with Network Diagnostics & Security Testing**
-
-<div align="center">
 
 > 🔗 **[📐 Design & Documentation](https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool)** | **[📚 Documentation Hub](./DOCUMENTATION_HUB.md)**
 
