@@ -14,7 +14,6 @@
       <SpeedTest ref="speedTestRef" />
       <AccessInfo />
       <AdvancedTools ref="advancedToolsRef" />
-      <ButtonShowcase />
     </div>
   </div>
   <InfoMask :showMaskButton.value="showMaskButton" :infoMaskLevel.value="infoMaskLevel"
@@ -42,7 +41,6 @@ import Additional from './components/Additional.vue';
 import Footer from './components/Footer.vue';
 import User from './components/User.vue';
 import Achievements from './components/Achievements.vue';
-import { ButtonShowcase } from './components/buttons';
 
 // Widgets
 import Preferences from './components/widgets/Preferences.vue';

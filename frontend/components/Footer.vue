@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div id="copyleft">
-      <p class="text-center"><span>Created by Jason Ng with love</span> <a :href="t('page.footerLink')"
+      <p class="text-center"><span>by H4TIHIT4M</span> <a :href="t('page.footerLink')"
           class="link-dark" target="_blank" @click="trackEvent('Footer', 'FooterClick', 'Github');"
           aria-label="Github"><i class="bi bi-github" :class="{ 'dark-mode': isDarkMode }"
             v-tooltip="{ title: t('Tooltips.GithubLink'), placement: 'top' }"></i></a>
