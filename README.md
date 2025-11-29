@@ -6,31 +6,16 @@
 
 <div align="center">
 
-![IPCheck.ing Banner](https://raw.githubusercontent.com/jason5ng32/MyIP/main/public/github/gh_banner.png)
-
 > 🔗 **[📐 Design & Documentation](https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool)** | **[📚 Documentation Hub](./DOCUMENTATION_HUB.md)**
-
-<a href="https://trendshift.io/repositories/5332" target="_blank"><img src="https://trendshift.io/api/badge/repositories/5332" alt="jason5ng32%2FMyIP | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 [![Mentioned in Awesome Self Hosted](https://awesome.re/mentioned-badge.svg)](https://github.com/awesome-selfhosted/awesome-selfhosted)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/jason5ng32/MyIP)
-![GitHub forks](https://img.shields.io/github/forks/jason5ng32/myip)
-![Docker Pulls](https://img.shields.io/docker/pulls/jason5ng32/myip)
-
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fipcheck.ing&up_message=online&label=IPCheck.ing 'IPCheck.ing')](https://ipcheck.ing)
+![GitHub Repo stars](https://img.shields.io/github/stars/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP)
+![GitHub forks](https://img.shields.io/github/forks/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP)
 ![PWA](https://img.shields.io/badge/PWA-Supported-blue)
 
-![CodeQL](https://github.com/jason5ng32/MyIP/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)
-![Docker Build and Push](https://github.com/jason5ng32/MyIP/actions/workflows/docker-image.yml/badge.svg?branch=main)
-
-
-
-👉 Demo: [https://ipcheck.ing](https://ipcheck.ing)
-
-Feel free to bookmark the demo or deploy your own.
-
-[![Deploy with Docker](https://raw.githubusercontent.com/jason5ng32/MyIP/main/public/github/Docker.svg)](https://hub.docker.com/r/jason5ng32/myip)
+![CodeQL](https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)
+![Docker Build and Push](https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP/actions/workflows/docker-image.yml/badge.svg?branch=main)
 
 </div>
 
@@ -94,7 +79,7 @@ Make sure you have Node.js installed.
 Clone the code:
 
 ```bash
-git clone https://github.com/jason5ng32/MyIP.git
+git clone https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP.git
 ```
 
 Install and build:

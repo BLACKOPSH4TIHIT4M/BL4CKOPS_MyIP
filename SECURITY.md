@@ -4,7 +4,7 @@ The security of our project is a top priority. If you discover a security vulner
 
 ### How to Report a Vulnerability
 
-1. **Report Through GitHub Issues**: Please create a new issue in our [GitHub Issues page](https://github.com/jason5ng32/MyIP/issues). Provide a clear and detailed description of the potential vulnerability. Include steps to reproduce it, if possible.
+1. **Report Through GitHub Issues**: Please create a new issue in our [GitHub Issues page](https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP/issues). Provide a clear and detailed description of the potential vulnerability. Include steps to reproduce it, if possible.
 
 2. **Avoid Public Disclosure**: To protect the community, please do not disclose the vulnerability publicly until we have had a chance to address it.
 
