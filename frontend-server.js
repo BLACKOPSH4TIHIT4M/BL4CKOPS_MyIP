@@ -5,7 +5,16 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
-dotenv.config();
+// Silencing dotenv startup tips so the console remains clean for new users
+{
+  const _consoleLog = console.log;
+  try {
+    console.log = () => {};
+    dotenv.config({ debug: false });
+  } finally {
+    console.log = _consoleLog;
+  }
+}
 
 const frontendApp = express();
 const backEndPort = parseInt(process.env.BACKEND_PORT || 11966, 10);

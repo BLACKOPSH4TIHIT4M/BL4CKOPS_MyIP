@@ -29,3 +29,15 @@ package-lock.json
 localtest
 
 .VSCodeCounter
+
+# Admin monitoring (local use only - do not push)
+admin-monitor.js
+admin-dashboard.html
+frontend/utils/admin-telemetry.js
+logs/
+*.log
+ADMIN_DASHBOARD.md
+
+# Local development
+.env.local
+.env.*.local

@@ -4,8 +4,10 @@
   "version": "5.0.0",
   "type": "module",
   "scripts": {
+    "setup": "node setup-admin-password.js",
     "dev": "concurrently \"vite\" \"nodemon backend-server.js\"",
     "build": "vite build",
+    "build:prod": "vite build && node build-secure.js",
     "preview": "vite preview",
     "start-backend": "node backend-server.js",
     "start-frontend": "node frontend-server.js",
@@ -39,7 +41,10 @@
     "vue-i18n": "^11.1.12",
     "vue-markdown-render": "^2.3.0",
     "vue-router": "^4.6.3",
-    "whoiser": "^1.18.0"
+    "whoiser": "^1.18.0",
+    "javascript-obfuscator": "^4.1.1",
+    "crypto-js": "^4.2.0",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",

@@ -381,6 +381,17 @@
     "MacChecker": "Query information of a physical address",
     "BrowserInfo": "Check browser information and fingerprint",
     "SecurityChecklist": "Guide to securing your digital life"
+    ,
+    "TracerouteNote": "Run a traceroute from the server to a specified host or IP to inspect the path",
+    "ConnectionInfoNote": "View listening sockets, established connections, and LAN neighbor table on this host"
+  },
+  "traceroute": {
+    "Title": "Traceroute",
+    "Note": "Run a standard traceroute from this server to a destination host or IP to reveal network hops and latency"
+  },
+  "connectioninfo": {
+    "Title": "Connection Info",
+    "Note": "Shows open listening sockets, established peer connections, and local ARP neighbors"
   },
   "macchecker": {
     "Title": "MAC Lookup",

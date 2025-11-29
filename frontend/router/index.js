@@ -14,6 +14,8 @@ const MacChecker = () => import('../components/advanced-tools/MacChecker.vue');
 const BrowserInfo = () => import('../components/advanced-tools/BrowserInfo.vue');
 const Checklist = () => import('../components/advanced-tools/SecurityChecklist.vue');
 const EmptyComponent = () => import('../components/advanced-tools/Empty.vue');
+const ConnectionInfo = () => import('../components/advanced-tools/ConnectionInfo.vue');
+const Traceroute = () => import('../components/advanced-tools/Traceroute.vue');
 
 const routes = [
   { path: '/', component: EmptyComponent },
@@ -26,6 +28,8 @@ const routes = [
   { path: '/macchecker', component: MacChecker },
   { path: '/browserinfo', component: BrowserInfo },
   { path: '/securitychecklist', component: Checklist },
+  { path: '/traceroute', component: Traceroute },
+  { path: '/connectioninfo', component: ConnectionInfo },
   { path: '/invisibilitytest', component: InvisibilityTest },
 ];
 

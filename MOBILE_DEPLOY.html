@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="BL4CKOPS IP">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>BL4CKOPS IP Reconnaissance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        p {
+            font-size: 1.1em;
+            color: #aaa;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .options {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .option {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+        }
+        
+        .option:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .option-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #00d4ff;
+        }
+        
+        .option-desc {
+            font-size: 0.9em;
+            color: #888;
+        }
+        
+        .features {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .features h3 {
+            margin-bottom: 15px;
+            color: #00d4ff;
+        }
+        
+        .features ul {
+            list-style: none;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            color: #aaa;
+            font-size: 0.95em;
+        }
+        
+        .features li:before {
+            content: "✓ ";
+            color: #00d4ff;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .status {
+            font-size: 0.9em;
+            color: #00d4ff;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 8px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85em;
+            color: #666;
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            .logo {
+                font-size: 2.5em;
+            }
+            
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🔍</div>
+        <h1>BL4CKOPS IP Reconnaissance</h1>
+        <p>Advanced IP Intelligence Tool - Instant Access</p>
+        
+        <div class="options">
+            <a href="https://blackopsh4tihit4m.github.io/BL4CKOPS_MyIP/" class="option">
+                <div class="option-title">📱 Open in Browser</div>
+                <div class="option-desc">Load instantly - No installation needed</div>
+            </a>
+            
+            <a href="https://blackopsh4tihit4m.github.io/BL4CKOPS_MyIP/" class="option" onclick="installPWA()">
+                <div class="option-title">📲 Install as App</div>
+                <div class="option-desc">Tap 'Share' → 'Add to Home Screen' (iOS) or 'Install' (Android)</div>
+            </a>
+            
+            <a href="https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP/raw/main/dist.zip" class="option">
+                <div class="option-title">💾 Download for Desktop</div>
+                <div class="option-desc">Use Docker or Node.js locally</div>
+            </a>
+        </div>
+        
+        <div class="features">
+            <h3>🌟 Features Available</h3>
+            <ul>
+                <li>Multi-source IP lookup (IPInfo, IPCheck.ing, IPAPI.is, IP2Location)</li>
+                <li>DNS leak detection</li>
+                <li>WebRTC leak testing</li>
+                <li>Speed testing</li>
+                <li>Connectivity tests</li>
+                <li>Advanced network tools (WHOIS, DNS resolver, MTR)</li>
+                <li>Offline support (PWA)</li>
+                <li>4 languages (EN, ZH, TR, FR)</li>
+                <li>Works on All OSes (Android, iOS, Windows, Linux, macOS)</li>
+            </ul>
+        </div>
+        
+        <div class="status">
+            ✓ Application is live and ready to use
+        </div>
+        
+        <div class="footer">
+            <p>Made by H4TIHIT4M | BL4CKOPS_MyIP | MIT License</p>
+            <p><a href="https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP" style="color: #00d4ff; text-decoration: none;">View on GitHub</a></p>
+        </div>
+    </div>
+    
+    <script>
+        // PWA Installation Prompt
+        let deferredPrompt;
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+        });
+        
+        function installPWA() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('PWA installed');
+                    }
+                    deferredPrompt = null;
+                });
+            } else {
+                // Fallback: direct redirect
+                window.location.href = 'https://blackopsh4tihit4m.github.io/BL4CKOPS_MyIP/';
+            }
+        }
+        
+        // Auto-redirect on certain conditions
+        if (window.location.hostname === 'github.com' || window.location.hostname.includes('raw.githubusercontent.com')) {
+            // Don't auto-redirect, let user click
+        }
+        
+        // Detect if running as PWA
+        if (window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches) {
+            document.body.style.backgroundColor = '#1a1a1a';
+        }
+    </script>
+</body>
+</html>
