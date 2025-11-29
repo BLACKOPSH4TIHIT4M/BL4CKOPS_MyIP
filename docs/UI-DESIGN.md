@@ -4,7 +4,7 @@
 Full-stack IP intelligence platform dengan network diagnostics dan security features.
 
 ## Design Resources
-- **Orchids Project:** https://www.orchids.app/projects/4febf5ec-0b97-4938-8745-ddc60da62855
+
 - **Production Repository:** https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP
 
 ## Architecture

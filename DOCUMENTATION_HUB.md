@@ -5,7 +5,7 @@
 ### Repositories
 - **Production Code:** https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP ⭐
 - **Design & Documentation:** https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool 📐
-- **UI/UX Design:** https://www.orchids.app/projects/4febf5ec-0b97-4938-8745-ddc60da62855 🎨
+
 
 ---
 
@@ -212,7 +212,7 @@ npm run build:prod      # Build with obfuscation
 | Channel | Link |
 |---------|------|
 | **Issues** | https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP/issues |
-| **Design Feedback** | https://www.orchids.app/projects/4febf5ec-0b97-4938-8745-ddc60da62855 |
+
 | **Email** | vbta014@gmail.com |
 
 ---

@@ -1,6 +1,6 @@
 ![BL4CKOPS Banner](docs/public/bl4ckops-banner.png)
 
-# 🇮🇩 BL4CKOPS IP Reconnaissance Tool
+# BL4CKOPS IP Reconnaissance Tool
 
 > **Advanced IP Intelligence Platform with Network Diagnostics & Security Testing**
 
@@ -8,7 +8,7 @@
 
 ![IPCheck.ing Banner](https://raw.githubusercontent.com/jason5ng32/MyIP/main/public/github/gh_banner.png)
 
-> 🔗 **[📐 Design & Documentation](https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool)** | **[🎨 UI/UX Design](https://www.orchids.app/projects/4febf5ec-0b97-4938-8745-ddc60da62855)** | **[📚 Documentation Hub](./DOCUMENTATION_HUB.md)**
+> 🔗 **[📐 Design & Documentation](https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool)** | **[📚 Documentation Hub](./DOCUMENTATION_HUB.md)**
 
 <a href="https://trendshift.io/repositories/5332" target="_blank"><img src="https://trendshift.io/api/badge/repositories/5332" alt="jason5ng32%2FMyIP | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
@@ -24,7 +24,7 @@
 ![CodeQL](https://github.com/jason5ng32/MyIP/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)
 ![Docker Build and Push](https://github.com/jason5ng32/MyIP/actions/workflows/docker-image.yml/badge.svg?branch=main)
 
-🇺🇸 [English](README.md) | 🇨🇳 [简体中文](README_ZH.md) | 🇫🇷 [Français](README_FR.md) | 🇹🇷 [Türkçe](README_TR.md)
+
 
 👉 Demo: [https://ipcheck.ing](https://ipcheck.ing)
 
@@ -46,7 +46,7 @@ Feel free to bookmark the demo or deploy your own.
 - **[docs/DESIGN.md](docs/DESIGN.md)** - Features, security implementation, development patterns
 - **[docs/API.md](docs/API.md)** - Complete API reference with examples
 - **[Design Repository (Separate)](https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool)** - Full design project
-- **[UI/UX Design](https://www.orchids.app/projects/4febf5ec-0b97-4938-8745-ddc60da62855)** - Figma mockups & design system
+
 
 ### 📚 Reference
 - **[USER_GUIDE.md](USER_GUIDE.md)** - What this tool collects, why, and transparency about data usage
@@ -83,7 +83,7 @@ Feel free to bookmark the demo or deploy your own.
 * 📲 **PWA Supported**：Can be added as a desktop app on your phone as well as a Chrome app on your computer.
 * ⌨️ **Keyboard Shortcuts**: Supports keyboard shortcuts for all functions, press `?` to view the shortcut list.
 * 🌍 Based on availability test results, it indicates whether global internet access is currently feasible.
-* 🇺🇸 🇨🇳 🇫🇷 English, Chinese, and French support.
+
 
 ## 📕 How to Use
 

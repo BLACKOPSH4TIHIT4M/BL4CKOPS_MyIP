@@ -21,7 +21,7 @@
 |------------|---------|
 | **[BL4CKOPS_MyIP](https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP)** | ⭐ Production code + security implementation |
 | **[bl4ckops-ip-reconnaissance-tool](https://github.com/BLACKOPSH4TIHIT4M/bl4ckops-ip-reconnaissance-tool)** | 📐 Design, documentation & architecture |
-| **[Orchids Project](https://www.orchids.app/projects/4febf5ec-0b97-4938-8745-ddc60da62855)** | 🎨 UI/UX Design (collaborative) |
+
 
 ---
 
@@ -289,7 +289,7 @@ npm run build:prod  # With obfuscation
 ## 📞 Support & Contact
 
 - **Production Issues:** https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP/issues
-- **Design Feedback:** https://www.orchids.app/projects/4febf5ec-0b97-4938-8745-ddc60da62855
+
 - **Email:** vbta014@gmail.com
 
 ---
