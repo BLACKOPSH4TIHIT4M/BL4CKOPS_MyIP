@@ -166,19 +166,24 @@
         <p>Advanced IP Intelligence Tool - Instant Access</p>
         
         <div class="options">
-            <a href="https://blackopsh4tihit4m.github.io/BL4CKOPS_MyIP/" class="option">
-                <div class="option-title">📱 Open in Browser</div>
-                <div class="option-desc">Load instantly - No installation needed</div>
+            <a href="http://localhost:18968" class="option">
+                <div class="option-title">🖥️ Vue Frontend (Dev)</div>
+                <div class="option-desc">http://localhost:18968 - Main development server</div>
             </a>
             
-            <a href="https://blackopsh4tihit4m.github.io/BL4CKOPS_MyIP/" class="option" onclick="installPWA()">
-                <div class="option-title">📲 Install as App</div>
-                <div class="option-desc">Tap 'Share' → 'Add to Home Screen' (iOS) or 'Install' (Android)</div>
+            <a href="http://localhost:18969" class="option">
+                <div class="option-title">⚛️ Next.js Frontend (Orchid)</div>
+                <div class="option-desc">http://localhost:18969 - Alternative Orchid skin</div>
             </a>
             
-            <a href="https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP/raw/main/dist.zip" class="option">
-                <div class="option-title">💾 Download for Desktop</div>
-                <div class="option-desc">Use Docker or Node.js locally</div>
+            <a href="http://localhost:11966/api/configs" class="option">
+                <div class="option-title">⚙️ Backend API</div>
+                <div class="option-desc">http://localhost:11966 - Check API configuration</div>
+            </a>
+            
+            <a href="http://localhost:80" class="option" onclick="deployDocker()">
+                <div class="option-title">🐳 Production Docker</div>
+                <div class="option-desc">docker-compose up -d (Private deployment on :80)</div>
             </a>
         </div>
         
@@ -202,7 +207,7 @@
         </div>
         
         <div class="footer">
-            <p>Made by H4TIHIT4M | BL4CKOPS_MyIP | MIT License</p>
+            <p>Made by H4TIHIT4M | BL4CKOPS_MyIP | MIT License | PRIVATE DEPLOYMENT</p>
             <p><a href="https://github.com/BLACKOPSH4TIHIT4M/BL4CKOPS_MyIP" style="color: #00d4ff; text-decoration: none;">View on GitHub</a></p>
         </div>
     </div>
@@ -227,8 +232,17 @@
                 });
             } else {
                 // Fallback: direct redirect
-                window.location.href = 'https://blackopsh4tihit4m.github.io/BL4CKOPS_MyIP/';
+                window.location.href = 'http://localhost:18968';
             }
+        }
+        
+        function deployDocker() {
+            const cmd = 'docker-compose up -d';
+            alert(`To deploy: Run this command in terminal:\n\n${cmd}\n\nThis will start:\n- Backend (port 11966)\n- Vue Frontend (port 18969)\n- Nginx Reverse Proxy (port 80)`);
+            // Copy to clipboard for convenience
+            navigator.clipboard.writeText(cmd).then(() => {
+                console.log('Command copied to clipboard');
+            });
         }
         
         // Auto-redirect on certain conditions
